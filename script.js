@@ -88,3 +88,12 @@ sendEl.addEventListener('click',()=>{
         setCardsData(cardsData);
     }
 })
+document.querySelectorAll('.btn').forEach(btn=>{
+    btn.addEventListener('mouseover',()=>{
+        btn.classList.add('over');
+        console.log(btn)
+    })
+    btn.addEventListener('mouseout',()=>{
+        btn.classList.remove('over');
+    })
+});
