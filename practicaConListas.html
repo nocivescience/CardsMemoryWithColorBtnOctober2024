@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .tarjeta {
+            width: 200px;
+            height: 300px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tarjeta1 {
+            background-color: #ff0000;
+        }
+
+        .tarjeta2 {
+            background-color: #1e5eff;
+        }
+
+        .tarjeta3 {
+            background-color: #00c961;
+        }
+
+        .tarjeta4 {
+            background-color: #f2ff00;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="tarjeta1 tarjeta"></div>
+        <div class="tarjeta2 tarjeta"></div>
+        <div class="tarjeta3 tarjeta"></div>
+        <div class="tarjeta4 tarjeta"></div>
+    </div>
+    <script>
+        const containerElement = document.querySelector('.container');
+        const tarjetasElement = Array.from(document.querySelectorAll('.tarjeta'));
+        tarjetasElement.forEach(tarjeta => {
+            tarjeta.addEventListener('mouseover', () => {
+                tarjeta.classList.add('tarjeta1');
+            });
+        });
+        tarjetasElement.forEach(tarjeta => {
+            tarjeta.addEventListener('mouseout', () => {
+                tarjeta.classList.remove('tarjeta1');
+            });
+        });
+    </script>
+</body>
+
+</html>
